@@ -7,7 +7,7 @@ class Currency{
     string currency1,currency2;
     double rupee,dollar,yen,pound,euro;
     int getcurrency1(){
-        cout<<"Enter the anmount you want to convert : ";
+        cout<<"Enter the amount you want to convert : ";
         cin>>num;
         cout<<"Enter the currency you want to convert.\n";
         cout<<"Use USD for American Dollar,EUR for Euro,GBP for Pounds,INR for Indian Rupees,YEN for Japanese Yen : ";
