@@ -9,6 +9,7 @@ class Currency{
     int getcurrency1(){
         cout<<"Enter the anmount you want to convert : ";
         cin>>num;
+        
         cout<<"Enter the currency you want to convert.\n";
         cout<<"Use USD for American Dollar,EUR for Euro,GBP for Pounds,INR for Indian Rupees,YEN for Japanese Yen : ";
         cin>>currency1;
@@ -102,6 +103,7 @@ class Distance{
 };
 int main(){
     string typc;
+    cout<<"Hello!";
     cout<<"What do you want to Convert ?\n";
     cout<<"Enter CUR for Currency, DIS for Distance, TMC for Time : ";
     cin>>typc;
