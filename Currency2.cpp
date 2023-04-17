@@ -44,9 +44,36 @@ class Currency{
     }
 
 };
+class Distance{
+    public:
+    float n,km,mtr,miles;
+    Distance(){
+        cout<<"Distance conversion :)"<<endl;
+    }
+    void Km(float n){
+        mtr=km*1000;
+        miles=km/1.609344;
+        km=n*1;
+    }
+    void Mtr(float n){
+        km=mtr/1000;
+        miles=mtr/1609.344;
+        mtr=n*1;
+    }
+    void Miles(float n){
+        km=miles*1.609344;
+        mtr=miles*1609.344;
+        miles=n*1;
+    }
+};
 int main(){
     double x;
-    string Currency1,Currency2;
+    float d;
+    string task,Currency1,Currency2,Distance1,Distance2;
+    cout<<"What do you want to do ? "<<endl;
+    cout<<"Enter CUR for Currency conversion, DIS for Distance conversion : ";
+    cin>>task;
+    if (task=="CUR"){
     Currency c1;
     cout<<"Enter the number : ";
     cin>>x;
@@ -91,5 +118,44 @@ int main(){
     }
     else{
         cout<<"INVALID INPUT";
+    }
+    }
+    else if(task=="DIS"){
+        Distance d1;
+        cout<<"Enter the Distance : ";
+        cin>>d;
+        cout<<"Enter the unit you want to convert."<<endl;
+        cout<<"Use KMS for Kilometers, MTR for meters, MLS for Miles : ";
+        cin>>Distance1;
+        if (Distance1 == "KMS"){
+            d1.Km(d);
+        }
+        else if (Distance1 == "MTR"){
+            d1.Mtr(d);
+        }
+        else if(Distance1=="MLS"){
+            d1.Miles(d);
+        }
+        else{
+            cout<<"INVALID INPUT!";
+        }
+        cout<<"Enter the unit in which you want to convert."<<endl;
+        cout<<"Use KMS for Kilometers, MTR for meters, MLS for Miles : ";
+        cin>>Distance2;
+        if (Distance2 == "KMS"){
+            cout<<"Distance in kilometers is "<<d1.km;
+        }
+        else if (Distance2 == "MTR"){
+            cout<<"Distance in meters is "<<d1.mtr;
+        }
+        else if(Distance2=="MLS"){
+            cout<<"Distance in miles is "<<d1.miles;
+        }
+        else{
+            cout<<"INVALID INPUT!";
+        }
+    }
+    else{
+        cout<<"INVALID INPUT!";
     }
 }
