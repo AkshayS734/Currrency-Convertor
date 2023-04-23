@@ -157,6 +157,14 @@ int main(){
         }
         else{
             cout<<"INVALID INPUT!"<<endl;
+            cout<<"Do you want to continue (y/n) : ";
+            cin>>c;
+            if(c=="y"){
+                main();
+            }
+            else{
+                exit(0);
+            }
         }
         cout<<"Enter the unit in which you want to convert."<<endl;
         cout<<"Use KMS for Kilometers, MTR for meters, MLS for Miles : ";
@@ -172,6 +180,14 @@ int main(){
         }
         else{
             cout<<"INVALID INPUT!";
+            cout<<"Do you want to continue (y/n) : ";
+            cin>>c;
+            if(c=="y"){
+                main();
+            }
+            else{
+                exit(0);
+            }
         }
     }
     else{
