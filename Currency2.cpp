@@ -70,6 +70,7 @@ class Distance{
 int main(){
     double x;
     float d;
+    string c;
     string task,Currency1,Currency2,Distance1,Distance2;
     cout<<"What do you want to do ? "<<endl;
     cout<<"Enter CUR for Currency conversion, DIS for Distance conversion : ";
@@ -97,7 +98,15 @@ int main(){
         c1.Yen(x);
     }
     else{
-        cout<<"INVALID INPUT";
+        cout<<"INVALID INPUT"<<endl;
+        cout<<"Do you want to continue (y/n) : ";
+        cin>>c;
+        if(c=="y"){
+            main();
+        }
+        else{
+            exit(0);
+        }
     }
     cout<<"Enter the currency in which you want to convert."<<endl;
     cout<<"Use USD for Dollar, INR for Rupee, EUR for Euro, GBP for Pound, YEN for Yen : ";
@@ -118,7 +127,16 @@ int main(){
         cout<<"The value in Yens is "<<c1.yen;
     }
     else{
-        cout<<"INVALID INPUT!";
+        cout<<"INVALID INPUT!"<<endl;
+        cout<<"Do you want to continue (y/n) : ";
+        cin>>c;
+        if(c=="y"){
+            main();
+        }
+        else{
+            exit(0);
+        }
+        
     }
     }
     else if(task=="DIS"||task=="dis"||task=="Dis"){
@@ -157,6 +175,14 @@ int main(){
         }
     }
     else{
-        cout<<"INVALID INPUT!";
+        cout<<"INVALID INPUT!"<<endl;
+        cout<<"Do you want to continue (y/n) : ";
+        cin>>c;
+        if(c=="y"){
+            main();
+        }
+        else{
+            exit(0);
+        }
     }
 }
