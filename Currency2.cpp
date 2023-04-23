@@ -67,16 +67,6 @@ class Distance{
         miles=n*1;
     }
 };
-class Time{
-    public:
-    float seconds,hours,minutes,t;
-    Time(){
-        cout<<"Time conversion :)"<<endl;
-    }
-    void Seconds(){}
-    void Minutes(){}
-    void Hours(){}
-};
 int main(){
     double x;
     float d;
@@ -84,7 +74,7 @@ int main(){
     cout<<"What do you want to do ? "<<endl;
     cout<<"Enter CUR for Currency conversion, DIS for Distance conversion : ";
     cin>>task;
-    if (task=="CUR"){
+    if (task=="CUR"||task=="cur"||task=="Cur"){
     Currency c1;
     cout<<"Enter the number : ";
     cin>>x;
@@ -128,10 +118,10 @@ int main(){
         cout<<"The value in Yens is "<<c1.yen;
     }
     else{
-        cout<<"INVALID INPUT";
+        cout<<"INVALID INPUT!";
     }
     }
-    else if(task=="DIS"){
+    else if(task=="DIS"||task=="dis"||task=="Dis"){
         Distance d1;
         cout<<"Enter the Distance : ";
         cin>>d;
@@ -148,7 +138,7 @@ int main(){
             d1.Miles(d);
         }
         else{
-            cout<<"INVALID INPUT!";
+            cout<<"INVALID INPUT!"<<endl;
         }
         cout<<"Enter the unit in which you want to convert."<<endl;
         cout<<"Use KMS for Kilometers, MTR for meters, MLS for Miles : ";
