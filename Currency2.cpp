@@ -42,29 +42,40 @@ class Currency{
         dollar =num*0.0075;
         yen=num*1;
     }
-
+    int select(){}
 };
 class Distance{
     public:
-    float n,km,mtr,miles;
+    double n;
+    long km,mtr,miles;
     Distance(){
         cout<<"Distance conversion :)"<<endl;
     }
-    void Km(float n){
-        mtr=km*1000;
-        miles=km/1.609344;
+    void Km(double n){
+        mtr=n*1000;
+        miles=n/1.609344;
         km=n*1;
     }
-    void Mtr(float n){
-        km=mtr/1000;
-        miles=mtr/1609.344;
+    void Mtr(double n){
+        km=n/1000;
+        miles=n/1609.344;
         mtr=n*1;
     }
-    void Miles(float n){
-        km=miles*1.609344;
-        mtr=miles*1609.344;
+    void Miles(double n){
+        km=n*1.609344;
+        mtr=n*1609.344;
         miles=n*1;
     }
+};
+class Time{
+    public:
+    float seconds,hours,minutes,t;
+    Time(){
+        cout<<"Time conversion :)"<<endl;
+    }
+    void Seconds(){}
+    void Minutes(){}
+    void Hours(){}
 };
 int main(){
     double x;
