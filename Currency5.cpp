@@ -195,6 +195,7 @@ int main() {
         main();
     }
     else {
+        cout << "Thanks for using!"<<endl;
         exit(0);
     }
 
